@@ -56,7 +56,7 @@ const ItemDetails = React.forwardRef ((props,ref) => {
   return (
     <>
     <MDBModal show={scrollableModal} setShow={setScrollableModal} tabIndex='-1'>
-      <MDBModalDialog scrollable size='xl'>
+      <MDBModalDialog scrollable size='fullscreen'>
         <MDBModalContent>
           <MDBModalHeader>
             <MDBModalTitle>{item.content}</MDBModalTitle>
@@ -69,7 +69,8 @@ const ItemDetails = React.forwardRef ((props,ref) => {
         <MDBModalBody>
           <div className="ratio ratio-16x9">
             <ReactPlayer
-            playing={true}
+	    width='100%'
+            playing={false}
             controls={true}
             url={item.url}
           />
